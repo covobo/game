@@ -9,9 +9,11 @@ QString loadStyleSheetFromFileAndReplaceUrlPath(QString file, QString folderForU
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QString stylSheet = loadStyleSheetFromFileAndReplaceUrlPath(a.applicationDirPath() + QString("/qss/style.css"), a.applicationDirPath());
-
-   // qDebug() << stylSheet;
+    QFile f(QString("://qss/style.css"));
+    f.open(QFile::ReadOnly);
+    QString stylSheet = QLatin1String(f.readAll());
+    f.close();
+    qDebug() << stylSheet;
 
     a.setStyleSheet(stylSheet);
 
@@ -21,12 +23,3 @@ int main(int argc, char *argv[])
     return a.exec();
 }
 
-QString loadStyleSheetFromFileAndReplaceUrlPath(QString file, QString folderForUrl)
-{
-    QFile f(file);
-    f.open(QFile::ReadOnly);
-    QString styleSheet = QLatin1String(f.readAll());
-    f.close();
-    styleSheet.replace("url(","url("+folderForUrl+"/");
-    return styleSheet;
-}

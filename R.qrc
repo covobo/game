@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qss/style.css</file>
+        <file>qss/img/bg.png</file>
+        <file>qss/img/bgplay.png</file>
+        <file>qss/img/bigbtn.png</file>
+        <file>qss/img/bigbtnpressed.png</file>
+        <file>qss/img/exitbtn.png</file>
+        <file>qss/img/exitbtnpressed.png</file>
+        <file>qss/img/pausebtn.png</file>
+        <file>qss/img/pausebtnpressed.png</file>
+        <file>qss/img/restartbtn.png</file>
+        <file>qss/img/restartbtnpressed.png</file>
+    </qresource>
+</RCC>
