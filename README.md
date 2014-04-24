@@ -12,3 +12,13 @@ __UPDA__
 
 Все ресурсы надо добавлять в проект. Теперь никаких переносов папок!
 
+
+TODO
+====
+
+*Add changer QSS style and general game setting*
+
+*Invent game logic and game ui class*
+
+
+
