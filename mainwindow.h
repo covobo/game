@@ -34,6 +34,7 @@ private:
     QState *setting;
     QState *youAreWinner;
     void initAllStateAndStartMachine();
+    void setDefaultStyle();
 };
 
 #endif // MAINWINDOW_H

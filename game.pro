@@ -13,11 +13,20 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    gamestartwidget.cpp \
+    gameplaywidget.cpp \
+    gamesettingwidget.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    gamestartwidget.h \
+    gameplaywidget.h \
+    gamesettingwidget.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    gamestartwidget.ui \
+    gameplaywidget.ui \
+    gamesettingwidget.ui
 
 OTHER_FILES +=
 
