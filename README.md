@@ -12,9 +12,4 @@ barley-break qt
 TODO
 ====
 
-*Add changer QSS style and general game setting*
-
 *Invent game logic and game ui class*
-
-
-
