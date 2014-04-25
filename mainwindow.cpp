@@ -7,6 +7,7 @@
 #include <QDir>
 #include <QString>
 #include <QPushButton>
+#include <QLabel>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
