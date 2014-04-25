@@ -1,0 +1,98 @@
+#GameStartCenralWidget{
+        background: url(://qss/default/img/bg.png) left top no-repeat;
+}
+#GamePlayCentralWidget{
+        background: url(://qss/default/img/bgplay.png) left top no-repeat;
+}
+#GameSettingCentralWidget{
+        background: url(://qss/default/img/bg.png) left top no-repeat;
+}
+QWidget#gameTitleLabel{
+	font: 48px 'Arial';
+	color: #a27031;
+}
+#difficultLabel, #themeLabel{
+    color: #000000;
+}
+/* кнопки на главной странице выглядит одинаково */
+GameStartWidget#gameStart QPushButton{
+        background: url(://qss/default/img/bigbtn.png) left top no-repeat;
+        border: 0px;
+        min-width: 218px;
+        max-width: 218px;
+        width: 218px;
+        height: 68px;
+        font: 26px 'Arial';
+        color: #a27031;
+}
+GameStartWidget#gameStart QPushButton:pressed {
+    background-image: url(://qss/default/img/bigbtnpressed.png);
+}
+GameStartWidget#gameStart QPushButton:checked {
+    background-image: url(://qss/default/img/bigbtnpressed.png);
+}
+
+
+GamePlayWidget QPushButton{
+	min-width: 87px;
+	max-width: 87px;
+	width: 87px;
+	min-height: 35px;
+	max-height: 35px;
+	height: 35px;
+	font: 14px 'Arial';
+	color: #a8692b;
+	border: 0;
+}
+
+GamePlayWidget QPushButton#exitGameBtn{
+        background: url(://qss/default/img/exitbtn.png) left top no-repeat;
+}
+
+GamePlayWidget QPushButton#pauseGameBtn{
+        background: url(://qss/default/img/pausebtn.png) left top no-repeat;
+}
+
+
+GamePlayWidget QPushButton#restartGameBtn{
+        background: url(://qss/default/img/restartbtn.png) left top no-repeat;
+}
+
+GamePlayWidget QPushButton#restartGameBtn:pressed{
+        background: url(://qss/default/img/restartbtnpressed.png) left top no-repeat;
+}
+
+GamePlayWidget QPushButton#restartGameBtn:checked{
+        background: url(://qss/default/img/restartbtnpressed.png) left top no-repeat;
+}
+
+GamePlayWidget QPushButton#exitGameBtn:checked{
+        background: url(://qss/default/img/exitbtnnpressed.png) left top no-repeat;
+}
+GamePlayWidget QPushButton#exitGameBtn:pressed{
+        background: url(://qss/default/img/exitbtnpressed.png) left top no-repeat;
+}
+
+GamePlayWidget QPushButton#pauseGameBtn:checked{
+        background: url(://qss/default/img/pausebtnnpressed.png) left top no-repeat;
+}
+GamePlayWidget QPushButton#pauseGameBtn:pressed{
+        background: url(://qss/default/img/pausebtnpressed.png) left top no-repeat;
+}
+
+
+GamePlayWidget QLabel#timerGame{
+	font: bold 12px 'Arial';
+	color: #000000;
+}
+#GameSettingCentralWidget QRadioButton::indicator{
+    width: 16px;
+    height: 18px;
+    image: url(://qss/default/img/radio_unchecked.png);
+}
+#GameSettingCentralWidget QRadioButton::indicator::checked{
+    image: url(://qss/default/img/radio_checked.png);
+}
+
+
+

@@ -19,9 +19,9 @@ MainWindow::MainWindow(QWidget *parent) :
     youAreWinner(new QState)
 {
     ui->setupUi(this);
-
-    initAllStateAndStartMachine();
     setDefaultStyle();
+    initAllStateAndStartMachine();
+
 }
 
 MainWindow::~MainWindow()
@@ -53,10 +53,10 @@ void MainWindow::initAllStateAndStartMachine(){
     stateOfGame->start();
 }
 void MainWindow::setDefaultStyle(){
-    QFile f(QString("://qss/style.css"));
+    QFile f(QString(DEFAULT_STYLE_NAME));
     f.open(QFile::ReadOnly);
     QString stylSheet = QLatin1String(f.readAll());
+    qDebug() << stylSheet;
     f.close();
-    dynamic_cast<QApplication*>(QCoreApplication::instance())->
-            setStyleSheet(stylSheet);
+    dynamic_cast<QApplication*>(QCoreApplication::instance())->setStyleSheet(stylSheet);
 }

@@ -2,7 +2,7 @@
 #define GAMESETTINGWIDGET_H
 
 #include <QWidget>
-
+#define DEFAULT_STYLE_PATH ":/qss"
 namespace Ui {
 class GameSettingWidget;
 }
@@ -15,6 +15,9 @@ public:
     explicit GameSettingWidget(QWidget *parent = 0);
     ~GameSettingWidget();
     
+private slots:
+    void on_chooseStyleBox_currentIndexChanged(int index);
+
 private:
     Ui::GameSettingWidget *ui;
 };

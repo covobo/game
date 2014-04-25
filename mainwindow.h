@@ -1,9 +1,10 @@
 ﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#define GAME_SCREEN_INDEX 1
 #define START_SCREEN_INDEX 0
+#define GAME_SCREEN_INDEX 1
 #define SETTING_SCREEN_INDEX 2
+#define DEFAULT_STYLE_NAME "://qss/default/default.qss"
 
 #include <QMainWindow>
 #include <QStateMachine>
@@ -20,11 +21,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    void makeTransition();
 
-
-signals:
-    void openWindow(QString key);
 
 private:
     Ui::MainWindow *ui;

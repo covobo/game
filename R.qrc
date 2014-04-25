@@ -1,15 +1,21 @@
 <RCC>
     <qresource prefix="/">
-        <file>qss/style.css</file>
-        <file>qss/img/bg.png</file>
-        <file>qss/img/bgplay.png</file>
-        <file>qss/img/bigbtn.png</file>
-        <file>qss/img/bigbtnpressed.png</file>
-        <file>qss/img/exitbtn.png</file>
-        <file>qss/img/exitbtnpressed.png</file>
-        <file>qss/img/pausebtn.png</file>
-        <file>qss/img/pausebtnpressed.png</file>
-        <file>qss/img/restartbtn.png</file>
-        <file>qss/img/restartbtnpressed.png</file>
+        <file>qss/default/default.qss</file>
+        <file>qss/default/img/bg.png</file>
+        <file>qss/default/img/bgplay.png</file>
+        <file>qss/default/img/bigbtn.png</file>
+        <file>qss/default/img/bigbtnpressed.png</file>
+        <file>qss/default/img/exitbtn.png</file>
+        <file>qss/default/img/exitbtnpressed.png</file>
+        <file>qss/default/img/pausebtn.png</file>
+        <file>qss/default/img/pausebtnpressed.png</file>
+        <file>qss/default/img/radio_checked.png</file>
+        <file>qss/default/img/radio_unchecked.png</file>
+        <file>qss/default/img/restartbtn.png</file>
+        <file>qss/default/img/restartbtnpressed.png</file>
+        <file>qss/modern/modern.qss</file>
+        <file>qss/noStyle/noStyle.qss</file>
+        <file>qss/modern/img/radio_unchecked.png</file>
+        <file>qss/modern/img/radio_checked.png</file>
     </qresource>
 </RCC>

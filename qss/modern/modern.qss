@@ -1,0 +1,69 @@
+#GameStartCenralWidget, #GamePlayCentralWidget, #GameSettingCentralWidget{
+        background-color: #ffffff;
+}
+
+QWidget#gameTitleLabel{
+	font: 48px 'Arial';
+	color: #0088cc;
+}
+#difficultLabel, #themeLabel{
+    color: #000000;
+}
+/* кнопки на главной странице выглядит одинаково */
+GameStartWidget#gameStart QPushButton{
+        background-color: #ffffff;
+        border: 1px solid #0088cc;
+		border-radius: 4px;
+        min-width: 218px;
+        max-width: 218px;
+        width: 218px;
+        height: 68px;
+        font: 26px 'Arial';
+        color: #0088cc;
+}
+GameStartWidget#gameStart QPushButton:pressed, GameStartWidget#gameStart QPushButton:checked,
+GameStartWidget#gameStart QPushButton:hover {
+    color: #ffffff;
+	background-color: #0088cc;
+}
+
+
+GamePlayWidget QPushButton{
+	background-color: #ffffff;
+	border: 1px solid #0088cc;
+	border-radius: 4px;
+	color: #0088cc;
+	
+	min-width: 74px;
+	max-width: 74px;
+	width: 74px;
+	min-height: 32px;
+	max-height: 32px;
+	height: 35px;
+	font: 14px 'Arial';
+
+}
+
+
+GamePlayWidget QPushButton:pressed, GamePlayWidget QPushButton:checked,
+GamePlayWidget QPushButton:hover{
+    color: #ffffff;
+	background-color: #0088cc;
+}
+
+
+GamePlayWidget QLabel#timerGame{
+	font: bold 12px 'Arial';
+	color: #000000;
+}
+#GameSettingCentralWidget QRadioButton::indicator{
+    width: 15px;
+    height: 16px;
+    image: url(://qss/modern/img/radio_unchecked.png);
+}
+#GameSettingCentralWidget QRadioButton::indicator::checked{
+    image: url(://qss/modern/img/radio_checked.png);
+}
+
+
+

@@ -28,7 +28,20 @@ FORMS    += mainwindow.ui \
     gameplaywidget.ui \
     gamesettingwidget.ui
 
-OTHER_FILES +=
+OTHER_FILES += \
+    qss/style.css \
+    qss/img/restartbtnpressed.png \
+    qss/img/restartbtn.png \
+    qss/img/radio_unchecked.png \
+    qss/img/radio_checked.png \
+    qss/img/pausebtnpressed.png \
+    qss/img/pausebtn.png \
+    qss/img/exitbtnpressed.png \
+    qss/img/exitbtn.png \
+    qss/img/bigbtnpressed.png \
+    qss/img/bigbtn.png \
+    qss/img/bgplay.png \
+    qss/img/bg.png
 
 RESOURCES += \
     R.qrc
