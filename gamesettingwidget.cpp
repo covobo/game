@@ -36,7 +36,6 @@ void GameSettingWidget::on_chooseStyleBox_currentIndexChanged(int index)
     QString path = ui->chooseStyleBox->itemData(index).toString();
     QString styleUrl = "file:///" + path + "/" + name + ".qss";
     dynamic_cast<QApplication*>(QCoreApplication::instance())->setStyleSheet(styleUrl);
-    qDebug() << styleUrl;
 }
 
 

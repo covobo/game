@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Barley Break Game</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="minimumSize">

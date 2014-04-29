@@ -56,7 +56,6 @@ void MainWindow::setDefaultStyle(){
     QFile f(QString(DEFAULT_STYLE_NAME));
     f.open(QFile::ReadOnly);
     QString stylSheet = QLatin1String(f.readAll());
-    qDebug() << stylSheet;
     f.close();
     dynamic_cast<QApplication*>(QCoreApplication::instance())->setStyleSheet(stylSheet);
 }

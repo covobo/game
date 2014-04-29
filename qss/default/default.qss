@@ -79,8 +79,20 @@ GamePlayWidget QPushButton#pauseGameBtn:checked{
 GamePlayWidget QPushButton#pauseGameBtn:pressed{
         background: url(://qss/default/img/pausebtnpressed.png) left top no-repeat;
 }
-
-
+QPushButton[isCell="true"]{
+    background: url(://qss/default/img/cell.png) left top / 100% 100% no-repeat;
+    font: bold 36px 'Arial';
+    color: #a8692b;
+    max-height: 80px;
+    min-height: 80px;
+    height: 80px;
+    text-align: center;
+    cursor: Pointing Hand;
+}
+QPushButton[isCell="true"]:hover, QPushButton[isCell="true"]:checked, QPushButton[isCell="true"]:pressed{
+    background: url(://qss/default/img/cellHover.png) left top / 100% 100% no-repeat;
+    color: #000000;
+}
 GamePlayWidget QLabel#timerGame{
 	font: bold 12px 'Arial';
 	color: #000000;
