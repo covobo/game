@@ -5,12 +5,15 @@
 #include "QString"
 #include <QSizePolicy>
 #include <QCursor>
+#include "barleybreak.h"
 
 GamePlayWidget::GamePlayWidget(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::GamePlayWidget)
+    ui(new Ui::GamePlayWidget),
+    gameLogic(new BarleyBreak)
 {
-    ui->setupUi(this);
+    ui->setupUi(this);    
+
 
     int size = 4;
     int sizeBtn = 320/size;

@@ -16,12 +16,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     gamestartwidget.cpp \
     gameplaywidget.cpp \
-    gamesettingwidget.cpp
+    gamesettingwidget.cpp \
+    barleybreak.cpp \
+    tile.cpp
 
 HEADERS  += mainwindow.h \
     gamestartwidget.h \
     gameplaywidget.h \
-    gamesettingwidget.h
+    gamesettingwidget.h \
+    barleybreak.h \
+    tile.h
 
 FORMS    += mainwindow.ui \
     gamestartwidget.ui \

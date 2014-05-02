@@ -87,7 +87,6 @@ QPushButton[isCell="true"]{
     min-height: 80px;
     height: 80px;
     text-align: center;
-    cursor: Pointing Hand;
 }
 QPushButton[isCell="true"]:hover, QPushButton[isCell="true"]:checked, QPushButton[isCell="true"]:pressed{
     background: url(://qss/default/img/cellHover.png) left top / 100% 100% no-repeat;

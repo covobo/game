@@ -2,6 +2,7 @@
 #define GAMEPLAYWIDGET_H
 
 #include <QWidget>
+#include "barleybreak.h"
 
 namespace Ui {
 class GamePlayWidget;
@@ -17,6 +18,7 @@ public:
     
 private:
     Ui::GamePlayWidget *ui;
+    BarleyBreak* gameLogic;
 };
 
 #endif // GAMEPLAYWIDGET_H
