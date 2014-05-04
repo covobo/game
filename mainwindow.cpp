@@ -43,8 +43,7 @@ void MainWindow::initAllStateAndStartMachine(){
     // GamePlayWidget
     game->assignProperty(ui->stackedWidget, "currentIndex", GAME_SCREEN_INDEX);
     game->addTransition(ui->gamePlay->findChild<QPushButton *>(QString("exitGameBtn")), SIGNAL(clicked()), start);
-
-
+    connect(game, SIGNAL(propertiesAssigned()), ui->gamePlay, SLOT(restartTimer()));
     stateOfGame->addState(start);
     stateOfGame->addState(game);
     stateOfGame->addState(setting);
