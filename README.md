@@ -12,4 +12,4 @@ barley-break qt
 TODO
 ====
 
-*Invent game logic and game ui class*
+*Invent game logic*
