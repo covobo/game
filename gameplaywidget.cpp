@@ -70,7 +70,7 @@ void GamePlayWidget::setTime(int second)
     string.append(QString::number(minuts));
     string.append("м:");
     string.append(QString::number(seconds));
-    string.append("c");
+    string.append("с");
     ui->timerGame->setText(string);
 }
 
