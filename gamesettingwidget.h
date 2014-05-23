@@ -1,6 +1,6 @@
 #ifndef GAMESETTINGWIDGET_H
 #define GAMESETTINGWIDGET_H
-
+#include "GlobalSettings.h"
 #include <QWidget>
 #define DEFAULT_STYLE_PATH ":/qss"
 namespace Ui {
@@ -18,8 +18,13 @@ public:
 private slots:
     void on_chooseStyleBox_currentIndexChanged(int index);
 
+    void on_dificulRadioBtn_clicked();
+
+    void on_dificulRadioBtn_2_clicked();
+
 private:
     Ui::GameSettingWidget *ui;
+    GlobalSettings* globalSettings;
 };
 
 #endif // GAMESETTINGWIDGET_H

@@ -6,7 +6,7 @@ BarleyBreak::BarleyBreak(int size)
         size += 1;
     }
     this->gameSize = size;
-    tiles = new QVector<Tile*>(this->gameSize);
+    //tiles = new QVector<Tile*>(this->gameSize);
     createTiles();
     shuffle();
 
@@ -18,6 +18,6 @@ void BarleyBreak::shuffle()
 }
 void BarleyBreak::createTiles(){
     for(int i = 0; i < this->gameSize; i++){
-        tiles->push_back(new Tile(i));
+       // tiles->push_back(new Tile(i));
     }
 }

@@ -2,7 +2,6 @@
 #define BARLEYBREAK_H
 
 #include <QVector>
-#include "tile.h"
 #include <QList>
 class BarleyBreak
 {
@@ -14,7 +13,6 @@ private:
 
 private:
     int gameSize;  // must be even
-    QVector<Tile*> *tiles;
 };
 
 #endif // BARLEYBREAK_H

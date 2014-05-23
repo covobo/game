@@ -166,7 +166,7 @@ text-decoration: underline;
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="text">
-     <string>большие - 20</string>
+     <string>большие - 35</string>
     </property>
    </widget>
    <widget class="QLabel" name="themeLabel">

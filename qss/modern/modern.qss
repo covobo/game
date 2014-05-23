@@ -14,8 +14,6 @@ GameStartWidget#gameStart QPushButton{
         background-color: #ffffff;
         border: 1px solid #0088cc;
 		border-radius: 4px;
-        min-width: 218px;
-        max-width: 218px;
         width: 218px;
         height: 68px;
         font: 26px 'Arial';
@@ -34,11 +32,8 @@ GamePlayWidget QPushButton{
 	border-radius: 4px;
 	color: #0088cc;
 	
-	min-width: 74px;
-	max-width: 74px;
-	width: 74px;
-	min-height: 32px;
-	max-height: 32px;
+
+        width: 74px;
 	height: 35px;
 	font: 14px 'Arial';
 
@@ -66,4 +61,8 @@ GamePlayWidget QLabel#timerGame{
 }
 
 
-
+QPushButton[isCell="true"]{
+    font: bold 36px 'Arial';
+    border-radius: 0;
+    text-align: center;
+}

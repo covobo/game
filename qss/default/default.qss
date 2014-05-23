@@ -34,11 +34,8 @@ GameStartWidget#gameStart QPushButton:checked {
 
 
 GamePlayWidget QPushButton{
-	min-width: 87px;
-	max-width: 87px;
 	width: 87px;
-	min-height: 35px;
-	max-height: 35px;
+        min-height: 35px;
 	height: 35px;
 	font: 14px 'Arial';
 	color: #a8692b;
@@ -83,10 +80,8 @@ QPushButton[isCell="true"]{
     background: url(://qss/default/img/cell.png) left top / 100% 100% no-repeat;
     font: bold 36px 'Arial';
     color: #a8692b;
-    max-height: 80px;
-    min-height: 80px;
-    height: 80px;
     text-align: center;
+    min-height: 0px;
 }
 QPushButton[isCell="true"]:hover, QPushButton[isCell="true"]:checked, QPushButton[isCell="true"]:pressed{
     background: url(://qss/default/img/cellHover.png) left top / 100% 100% no-repeat;

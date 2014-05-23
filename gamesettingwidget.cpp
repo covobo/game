@@ -3,12 +3,16 @@
 #include <QString>
 #include <QDir>
 #include <QDebug>
+#include "gamestartwidget.h"
+#include "GlobalSettings.h"
 
 GameSettingWidget::GameSettingWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::GameSettingWidget)
 {
     ui->setupUi(this);
+    globalSettings = GlobalSettings::Instance();
+
     /* fill combobox */
     QString stylesPaths = qgetenv("__STYLES_PATH");
     if (stylesPaths.isEmpty())
@@ -39,21 +43,12 @@ void GameSettingWidget::on_chooseStyleBox_currentIndexChanged(int index)
 }
 
 
+void GameSettingWidget::on_dificulRadioBtn_clicked()
+{
+    globalSettings->setGameBoardSize(4); // стандартные, 15
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void GameSettingWidget::on_dificulRadioBtn_2_clicked()
+{
+    globalSettings->setGameBoardSize(6); // больие 35
+}

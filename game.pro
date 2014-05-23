@@ -18,19 +18,22 @@ SOURCES += main.cpp\
     gameplaywidget.cpp \
     gamesettingwidget.cpp \
     barleybreak.cpp \
-    tile.cpp
+    gametileswidget.cpp \
+    GlobalSettings.cpp
 
 HEADERS  += mainwindow.h \
     gamestartwidget.h \
     gameplaywidget.h \
     gamesettingwidget.h \
     barleybreak.h \
-    tile.h
+    gametileswidget.h \
+    GlobalSettings.h
 
 FORMS    += mainwindow.ui \
     gamestartwidget.ui \
     gameplaywidget.ui \
-    gamesettingwidget.ui
+    gamesettingwidget.ui \
+    gametileswidget.ui
 
 OTHER_FILES += \
     qss/style.css \
@@ -49,3 +52,5 @@ OTHER_FILES += \
 
 RESOURCES += \
     R.qrc
+
+QMAKE_CXXFLAGS += -std=c++11

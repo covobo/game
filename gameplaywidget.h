@@ -16,21 +16,22 @@ class GamePlayWidget : public QWidget
 public:
     explicit GamePlayWidget(QWidget *parent = 0);
     ~GamePlayWidget();
-    int secondsOfGame = 0;
+    int milisecondsOfGame = 0;
 
 public slots:
     void updateTimer();
     void restartTimer();
     void triggerPauseAndPlayGame();
-    void restartGame();
+    void restartTimerAndEmitSignal();
+signals:
+   void restartGame();
 
 private:
     Ui::GamePlayWidget *ui;
     BarleyBreak* gameLogic;
      void setTime(int);
     QTimer* timer;
-    int timerspeed = 1000; // 1s
-    void game();
+    int timerspeed = 100; // 0.1s
 
 };
 
