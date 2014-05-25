@@ -21,7 +21,7 @@ GamePlayWidget::GamePlayWidget(QWidget *parent) :
     connect(ui->pauseGameBtn, SIGNAL(clicked()), this, SLOT(triggerPauseAndPlayGame()));
     connect(ui->restartGameBtn, SIGNAL(clicked()), this, SLOT(restartTimer()));
     connect(ui->restartGameBtn, SIGNAL(clicked()), ui->gameTiles, SLOT(createLogicAndBoard()));
-    connect(ui->restartGameBtn, SIGNAL(clicked()), this, SLOT(showTimer()));
+    connect(ui->restartGameBtn, SIGNAL(clicked()), this, SLOT(play()));
     connect(ui->gameTiles, SIGNAL(iAmWinner()), this, SLOT(saveTime()));
 }
 
@@ -45,9 +45,9 @@ void GamePlayWidget::restartTimer()
 void GamePlayWidget::triggerPauseAndPlayGame()
 {
     if(ui->gameTiles->isHidden()){
-        showTimer();
+        play();
     } else {
-        hideTimer();
+        pause();
     }
 
 }
@@ -57,14 +57,14 @@ void GamePlayWidget::restartGame()
     ui->gameTiles->createLogicAndBoard();
 }
 
-void GamePlayWidget::showTimer()
+void GamePlayWidget::play()
 {
     ui->gameTiles->show();
     timer->start();
     ui->pauseGameBtn->setText(QString("Пауза"));
 }
 
-void GamePlayWidget::hideTimer()
+void GamePlayWidget::pause()
 {
     timer->stop();
     ui->gameTiles->hide();

@@ -23,8 +23,8 @@ public slots:
     void restartTimer();
     void triggerPauseAndPlayGame();
     void restartGame();
-    void showTimer();
-    void hideTimer();
+    void play();
+    void pause();
     void saveTime();
 
 private:

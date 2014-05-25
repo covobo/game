@@ -54,6 +54,7 @@ void MainWindow::initAllStateAndStartMachine(){
     game->addTransition(ui->gamePlay->findChild<GameTilesWidget *>(QString("gameTiles")), SIGNAL(iAmWinner()), winner);
 
     connect(game, SIGNAL(propertiesAssigned()), ui->gamePlay, SLOT(restartTimer()));
+    connect(game, SIGNAL(propertiesAssigned()), ui->gamePlay, SLOT(play()));
     connect(game, SIGNAL(propertiesAssigned()), ui->gamePlay, SLOT(restartGame()));
 
     stateOfGame->addState(winner);
