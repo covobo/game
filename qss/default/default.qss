@@ -83,9 +83,16 @@ QPushButton[isCell="true"]{
     text-align: center;
     min-height: 0px;
 }
+QPushButton[isEmptyCell="true"]{
+   background: 0;
+}
 QPushButton[isCell="true"]:hover, QPushButton[isCell="true"]:checked, QPushButton[isCell="true"]:pressed{
-    background: url(://qss/default/img/cellHover.png) left top / 100% 100% no-repeat;
-    color: #000000;
+    background: url(://qss/default/img/cell.png) left top / 100% 100% no-repeat;
+    color: #a8692b;
+}
+QPushButton[isEmptyCell="true"]:hover, QPushButton[isEmptyCell="true"]:checked, QPushButton[isEmptyCell="true"]:pressed{
+ background: 0;
+ color: #a8692b;
 }
 GamePlayWidget QLabel#timerGame{
 	font: bold 12px 'Arial';

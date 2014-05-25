@@ -8,6 +8,9 @@
 #include <QString>
 #include <QPushButton>
 #include <QLabel>
+#include <QtWidgets>
+#include <QWidget>
+#include "gametileswidget.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -21,7 +24,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     setDefaultStyle();
     initAllStateAndStartMachine();
-
 }
 
 MainWindow::~MainWindow()
@@ -30,6 +32,7 @@ MainWindow::~MainWindow()
 }
 /* init all state for navigating stacked widget */
 void MainWindow::initAllStateAndStartMachine(){
+    youAreWinner->assignProperty(ui->stackedWidget, "currendIndex", WINNER_SCREEN_INDEX);
     // GameSettingWidget
     setting->assignProperty(ui->stackedWidget, "currentIndex", SETTING_SCREEN_INDEX);
     setting->addTransition(ui->gameSetting->findChild<QPushButton *>(QString("goStartScreenBtn")), SIGNAL(clicked()), start);
@@ -43,7 +46,12 @@ void MainWindow::initAllStateAndStartMachine(){
     // GamePlayWidget
     game->assignProperty(ui->stackedWidget, "currentIndex", GAME_SCREEN_INDEX);
     game->addTransition(ui->gamePlay->findChild<QPushButton *>(QString("exitGameBtn")), SIGNAL(clicked()), start);
+    game->addTransition(ui->gamePlay->findChild<GameTilesWidget *>(QString("gameTiles")), SIGNAL(iAmWinner()), youAreWinner);
+
     connect(game, SIGNAL(propertiesAssigned()), ui->gamePlay, SLOT(restartTimer()));
+    connect(game, SIGNAL(propertiesAssigned()), ui->gamePlay, SLOT(restartGame()));
+
+    stateOfGame->addState(youAreWinner);
     stateOfGame->addState(start);
     stateOfGame->addState(game);
     stateOfGame->addState(setting);

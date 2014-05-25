@@ -1,4 +1,6 @@
 #include "GlobalSettings.h"
+#include "barleybreak.h"
+#include "TilesGame.h"
 
 GlobalSettings* GlobalSettings::GlobalSettingsInstance = NULL;
 GlobalSettings::GlobalSettings() :
@@ -14,11 +16,16 @@ GlobalSettings* GlobalSettings::Instance()
     return GlobalSettingsInstance;
 }
 
+TilesGame* GlobalSettings::getGameLogicObject(int gameBoardSize)
+{
+    return dynamic_cast<TilesGame*>(new BarleyBreak(gameBoardSize));
+}
+
 void GlobalSettings::setGameBoardSize(int newValue)
 {
     if(GAME_BOARD_SIZE != newValue){
         GAME_BOARD_SIZE = newValue;
-        emit gameBoardSizeValueChanged(newValue);
+        emit gameBoardSizeValueChanged();
     }
 }
 

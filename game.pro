@@ -19,7 +19,9 @@ SOURCES += main.cpp\
     gamesettingwidget.cpp \
     barleybreak.cpp \
     gametileswidget.cpp \
-    GlobalSettings.cpp
+    GlobalSettings.cpp \
+    tile.cpp \
+    TilesGame.cpp
 
 HEADERS  += mainwindow.h \
     gamestartwidget.h \
@@ -27,7 +29,9 @@ HEADERS  += mainwindow.h \
     gamesettingwidget.h \
     barleybreak.h \
     gametileswidget.h \
-    GlobalSettings.h
+    GlobalSettings.h \
+    tile.h \
+    TilesGame.h
 
 FORMS    += mainwindow.ui \
     gamestartwidget.ui \

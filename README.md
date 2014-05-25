@@ -12,4 +12,4 @@ barley-break qt
 TODO
 ====
 
-*Invent game logic*
+*Invent last screen (youAreWinner*

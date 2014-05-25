@@ -6,11 +6,11 @@
 #include <QCursor>
 #include <QTimer>
 #include "barleybreak.h"
+#include "gametileswidget.h"
 
 GamePlayWidget::GamePlayWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::GamePlayWidget),
-    gameLogic(new BarleyBreak),
     timer(new QTimer(this))
 {
     ui->setupUi(this);
@@ -19,7 +19,8 @@ GamePlayWidget::GamePlayWidget(QWidget *parent) :
 
     connect(timer, SIGNAL(timeout()), this, SLOT(updateTimer()));
     connect(ui->pauseGameBtn, SIGNAL(clicked()), this, SLOT(triggerPauseAndPlayGame()));
-    connect(ui->restartGameBtn, SIGNAL(clicked()), this, SLOT(restartTimerAndEmitSignal()));
+    connect(ui->restartGameBtn, SIGNAL(clicked()), this, SLOT(restartTimer()));
+    connect(ui->restartGameBtn, SIGNAL(clicked()), ui->gameTiles, SLOT(createLogicAndBoard()));
 }
 
 GamePlayWidget::~GamePlayWidget()
@@ -53,11 +54,11 @@ void GamePlayWidget::triggerPauseAndPlayGame()
 
 }
 
-void GamePlayWidget::restartTimerAndEmitSignal()
+void GamePlayWidget::restartGame()
 {
-    restartTimer();
-    emit restartGame();
+    ui->gameTiles->createLogicAndBoard();
 }
+
 
 void GamePlayWidget::setTime(int second)
 {

@@ -22,13 +22,9 @@ public slots:
     void updateTimer();
     void restartTimer();
     void triggerPauseAndPlayGame();
-    void restartTimerAndEmitSignal();
-signals:
-   void restartGame();
-
+    void restartGame();
 private:
     Ui::GamePlayWidget *ui;
-    BarleyBreak* gameLogic;
      void setTime(int);
     QTimer* timer;
     int timerspeed = 100; // 0.1s

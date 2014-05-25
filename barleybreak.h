@@ -3,16 +3,20 @@
 
 #include <QVector>
 #include <QList>
-class BarleyBreak
-{
-public:
-    BarleyBreak(int size = 16);
-private:
-    void shuffle();
-    void createTiles();
+#include <tile.h>
+#include <TilesGame.h>
 
+class BarleyBreak : public TilesGame
+{
+    Q_OBJECT
+public:
+    BarleyBreak(int size = 4);
 private:
-    int gameSize;  // must be even
+    virtual bool moveTile(Tile* tile);
+    virtual bool gameEnded();
+    void shuffle();
+    void swap(int x_from,int y_from,int x_to, int y_to);
+    Tile* findEmptyTile();
 };
 
 #endif // BARLEYBREAK_H

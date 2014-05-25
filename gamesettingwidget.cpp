@@ -45,10 +45,10 @@ void GameSettingWidget::on_chooseStyleBox_currentIndexChanged(int index)
 
 void GameSettingWidget::on_dificulRadioBtn_clicked()
 {
-    globalSettings->setGameBoardSize(4); // стандартные, 15
+    globalSettings->setGameBoardSize(4); // standart board 15
 }
 
 void GameSettingWidget::on_dificulRadioBtn_2_clicked()
 {
-    globalSettings->setGameBoardSize(6); // больие 35
+    globalSettings->setGameBoardSize(6); // big board 35
 }

@@ -66,3 +66,11 @@ QPushButton[isCell="true"]{
     border-radius: 0;
     text-align: center;
 }
+QPushButton[isCell="true"]:hover, QPushButton[isCell="true"]:checked, QPushButton[isCell="true"]:pressed{
+color: #0088cc;
+background-color: #ffffff;
+}
+QPushButton[isEmptyCell="true"]{
+   background: 0;
+   border: 0;
+}
