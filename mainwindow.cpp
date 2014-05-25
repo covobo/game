@@ -61,7 +61,7 @@ void MainWindow::initAllStateAndStartMachine(){
     stateOfGame->addState(game);
     stateOfGame->addState(setting);
 
-    stateOfGame->setInitialState(winner);
+    stateOfGame->setInitialState(start);
     stateOfGame->start();
 }
 void MainWindow::setDefaultStyle(){
