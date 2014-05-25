@@ -72,7 +72,14 @@
     </widget>
     <widget class="GamePlayWidget" name="gamePlay"/>
     <widget class="GameSettingWidget" name="gameSetting"/>
-    <widget class="QWidget" name="page"/>
+    <widget class="GameWinnerWidget" name="gameWinner">
+     <property name="minimumSize">
+      <size>
+       <width>322</width>
+       <height>402</height>
+      </size>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
@@ -94,6 +101,12 @@
    <class>GameSettingWidget</class>
    <extends>QWidget</extends>
    <header location="global">gamesettingwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GameWinnerWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">gamewinnerwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -7,6 +7,9 @@
 #GameSettingCentralWidget{
         background: url(://qss/default/img/bg.png) left top no-repeat;
 }
+#GameWinnerCentralWidget{
+        background: url(://qss/default/img/winnerscreen.png) left top no-repeat;
+}
 QWidget#gameTitleLabel{
 	font: 48px 'Arial';
 	color: #a27031;
@@ -34,42 +37,70 @@ GameStartWidget#gameStart QPushButton:checked {
 
 
 GamePlayWidget QPushButton{
-	width: 87px;
-        min-height: 35px;
-	height: 35px;
-	font: 14px 'Arial';
-	color: #a8692b;
-	border: 0;
+    width: 87px;
+    min-height: 35px;
+    height: 35px;
+    font: 14px 'Arial';
+    color: #a8692b;
+    border: 0;
 }
-
+GameWinnerWidget QPushButton{
+    min-height: 35px;
+    height: 35px;
+    font: 14px 'Arial';
+    color: #a8692b;
+    border: 0;
+}
+GameWinnerWidget #title{
+    color: #a27031;
+}
 GamePlayWidget QPushButton#exitGameBtn{
-        background: url(://qss/default/img/exitbtn.png) left top no-repeat;
+   background: url(://qss/default/img/exitbtn.png) left top no-repeat;
 }
-
+GameWinnerWidget QPushButton#exitGameBtn{
+    background: url(://qss/default/img/exitbtn.png) right top no-repeat;
+    text-align: center;
+    padding-left: 0px;
+}
 GamePlayWidget QPushButton#pauseGameBtn{
-        background: url(://qss/default/img/pausebtn.png) left top no-repeat;
+    background: url(://qss/default/img/pausebtn.png) left top no-repeat;
 }
 
 
 GamePlayWidget QPushButton#restartGameBtn{
         background: url(://qss/default/img/restartbtn.png) left top no-repeat;
 }
+GameWinnerWidget QPushButton#newGameBtn{
+        background: url(://qss/default/img/restartbtn.png) left top no-repeat;
+}
 
 GamePlayWidget QPushButton#restartGameBtn:pressed{
+        background: url(://qss/default/img/restartbtnpressed.png) left top no-repeat;
+}
+GameWinnerWidget QPushButton#newGameBtn:pressed{
         background: url(://qss/default/img/restartbtnpressed.png) left top no-repeat;
 }
 
 GamePlayWidget QPushButton#restartGameBtn:checked{
         background: url(://qss/default/img/restartbtnpressed.png) left top no-repeat;
 }
-
+GameWinnerWidget QPushButton#newGameBtn:checked{
+        background: url(://qss/default/img/restartbtnpressed.png) left top no-repeat;
+}
 GamePlayWidget QPushButton#exitGameBtn:checked{
         background: url(://qss/default/img/exitbtnnpressed.png) left top no-repeat;
+}
+GameWinnerWidget QPushButton#exitGameBtn:checked{
+        background: url(://qss/default/img/exitbtnnpressed.png) right top no-repeat;
+
 }
 GamePlayWidget QPushButton#exitGameBtn:pressed{
         background: url(://qss/default/img/exitbtnpressed.png) left top no-repeat;
 }
+GameWinnerWidget QPushButton#exitGameBtn:pressed{
+background: url(://qss/default/img/exitbtnpressed.png) right top no-repeat;
 
+}
 GamePlayWidget QPushButton#pauseGameBtn:checked{
         background: url(://qss/default/img/pausebtnnpressed.png) left top no-repeat;
 }
@@ -83,17 +114,7 @@ QPushButton[isCell="true"]{
     text-align: center;
     min-height: 0px;
 }
-QPushButton[isEmptyCell="true"]{
-   background: 0;
-}
-QPushButton[isCell="true"]:hover, QPushButton[isCell="true"]:checked, QPushButton[isCell="true"]:pressed{
-    background: url(://qss/default/img/cell.png) left top / 100% 100% no-repeat;
-    color: #a8692b;
-}
-QPushButton[isEmptyCell="true"]:hover, QPushButton[isEmptyCell="true"]:checked, QPushButton[isEmptyCell="true"]:pressed{
- background: 0;
- color: #a8692b;
-}
+
 GamePlayWidget QLabel#timerGame{
 	font: bold 12px 'Arial';
 	color: #000000;
@@ -107,5 +128,7 @@ GamePlayWidget QLabel#timerGame{
     image: url(://qss/default/img/radio_checked.png);
 }
 
-
+QPushButton[isEmptyCell="true"]{
+    background: 0;
+}
 

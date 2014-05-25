@@ -1,7 +1,9 @@
 #GameStartCenralWidget, #GamePlayCentralWidget, #GameSettingCentralWidget{
         background-color: #ffffff;
 }
-
+#GameWinnerCentralWidget{
+    background-color: #ffffff;
+}
 QWidget#gameTitleLabel{
 	font: 48px 'Arial';
 	color: #0088cc;
@@ -38,7 +40,20 @@ GamePlayWidget QPushButton{
 	font: 14px 'Arial';
 
 }
+GameWinnerWidget QPushButton{
+    background-color: #ffffff;
+    border: 1px solid #0088cc;
+    border-radius: 4px;
+    color: #0088cc;
 
+
+    width: 74px;
+    height: 35px;
+    font: 14px 'Arial';
+}
+GameWinnerWidget #title{
+    color: #0088cc;
+}
 
 GamePlayWidget QPushButton:pressed, GamePlayWidget QPushButton:checked,
 GamePlayWidget QPushButton:hover{

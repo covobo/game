@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     gametileswidget.cpp \
     GlobalSettings.cpp \
     tile.cpp \
-    TilesGame.cpp
+    TilesGame.cpp \
+    gamewinnerwidget.cpp
 
 HEADERS  += mainwindow.h \
     gamestartwidget.h \
@@ -31,13 +32,15 @@ HEADERS  += mainwindow.h \
     gametileswidget.h \
     GlobalSettings.h \
     tile.h \
-    TilesGame.h
+    TilesGame.h \
+    gamewinnerwidget.h
 
 FORMS    += mainwindow.ui \
     gamestartwidget.ui \
     gameplaywidget.ui \
     gamesettingwidget.ui \
-    gametileswidget.ui
+    gametileswidget.ui \
+    gamewinnerwidget.ui
 
 OTHER_FILES += \
     qss/style.css \

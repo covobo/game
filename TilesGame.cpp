@@ -14,7 +14,6 @@ TilesGame::TilesGame(int gameBoardSize)
             tiles->prepend(new Tile(x-1,y-1, value, false));
         }
     }
-    qDebug() << QString("GameLogic size: ").append(QString::number(this->tiles->size()));
 }
 void TilesGame::move(Tile* tile)
 {

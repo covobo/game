@@ -19,5 +19,6 @@
         <file>qss/modern/img/radio_checked.png</file>
         <file>qss/default/img/cell.png</file>
         <file>qss/default/img/cellHover.png</file>
+        <file>qss/default/img/winnerscreen.png</file>
     </qresource>
 </RCC>

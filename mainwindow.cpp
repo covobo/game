@@ -16,10 +16,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     stateOfGame(new QStateMachine),
+    winner(new QState),
     start(new QState),
     game(new QState),
-    setting(new QState),
-    youAreWinner(new QState)
+    setting(new QState)
+
 {
     ui->setupUi(this);
     setDefaultStyle();
@@ -32,7 +33,11 @@ MainWindow::~MainWindow()
 }
 /* init all state for navigating stacked widget */
 void MainWindow::initAllStateAndStartMachine(){
-    youAreWinner->assignProperty(ui->stackedWidget, "currendIndex", WINNER_SCREEN_INDEX);
+    winner->assignProperty(ui->stackedWidget, "currentIndex", WINNER_SCREEN_INDEX);
+    winner->addTransition(ui->gameWinner->findChild<QPushButton *>(QString("newGameBtn")), SIGNAL(clicked()), game);
+    winner->addTransition(ui->gameWinner->findChild<QPushButton *>(QString("exitGameBtn")), SIGNAL(clicked()), start);
+    connect(winner, SIGNAL(propertiesAssigned()), ui->gameWinner, SLOT(setTime()));
+
     // GameSettingWidget
     setting->assignProperty(ui->stackedWidget, "currentIndex", SETTING_SCREEN_INDEX);
     setting->addTransition(ui->gameSetting->findChild<QPushButton *>(QString("goStartScreenBtn")), SIGNAL(clicked()), start);
@@ -46,17 +51,17 @@ void MainWindow::initAllStateAndStartMachine(){
     // GamePlayWidget
     game->assignProperty(ui->stackedWidget, "currentIndex", GAME_SCREEN_INDEX);
     game->addTransition(ui->gamePlay->findChild<QPushButton *>(QString("exitGameBtn")), SIGNAL(clicked()), start);
-    game->addTransition(ui->gamePlay->findChild<GameTilesWidget *>(QString("gameTiles")), SIGNAL(iAmWinner()), youAreWinner);
+    game->addTransition(ui->gamePlay->findChild<GameTilesWidget *>(QString("gameTiles")), SIGNAL(iAmWinner()), winner);
 
     connect(game, SIGNAL(propertiesAssigned()), ui->gamePlay, SLOT(restartTimer()));
     connect(game, SIGNAL(propertiesAssigned()), ui->gamePlay, SLOT(restartGame()));
 
-    stateOfGame->addState(youAreWinner);
+    stateOfGame->addState(winner);
     stateOfGame->addState(start);
     stateOfGame->addState(game);
     stateOfGame->addState(setting);
 
-    stateOfGame->setInitialState(start);
+    stateOfGame->setInitialState(winner);
     stateOfGame->start();
 }
 void MainWindow::setDefaultStyle(){

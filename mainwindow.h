@@ -27,10 +27,11 @@ public:
 private:
     Ui::MainWindow *ui;
     QStateMachine *stateOfGame;
+    QState *winner;
     QState *start;
     QState *game;
     QState *setting;
-    QState *youAreWinner;
+
     void initAllStateAndStartMachine();
     void setDefaultStyle();
 };

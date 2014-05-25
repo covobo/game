@@ -14,6 +14,8 @@ GameTilesWidget::GameTilesWidget(QWidget *parent) :
 {
     ui->setupUi(this);
     settings = GlobalSettings::Instance();
+    gameLogic = NULL;
+    signalMapper = NULL;
 }
 // получили сигнал, что изменилось состояние
 // получили вектор плиток, собираем поле
@@ -47,7 +49,6 @@ void GameTilesWidget::tileWasClicked(QObject* obj)
 
 void GameTilesWidget::winner()
 {
-    qDebug() << "YOU WON!";
     emit iAmWinner();
 }
 // удаляем все конекты, пересоздаём логику и переписываем коннекты
@@ -55,11 +56,10 @@ void GameTilesWidget::createLogicAndBoard()
 {
     int size = settings->getGameBoardSize();
     removeAllChilds(ui->gridLayout);
-    disconnect(this, SLOT(remakeBoard(QVector<Tile*>*)));
-    disconnect(this, SLOT(winner()));
-    disconnect(this, SLOT(tileWasClicked(QObject* obj)));
-    delete gameLogic;
-    delete signalMapper;
+    if(gameLogic != NULL)
+      delete gameLogic;
+    if(signalMapper != NULL)
+        delete signalMapper;
     gameLogic = settings->getGameLogicObject(size);
     signalMapper = new QSignalMapper(this);
     connect(gameLogic, SIGNAL(gameBoardChanged(QVector<Tile*>*)),this,SLOT(remakeBoard(QVector<Tile*>*)));
@@ -80,10 +80,6 @@ void GameTilesWidget::removeAllChilds(QGridLayout *layout) {
 }
 GameTilesWidget::~GameTilesWidget()
 {
-    removeAllChilds(ui->gridLayout);
-    disconnect(this, SLOT(remakeBoard(QVector<Tile*>*)));
-    disconnect(this, SLOT(winner()));
-    disconnect(this, SLOT(tileWasClicked(QObject* obj)));
     delete ui;
     delete gameLogic;
 }

@@ -58,7 +58,6 @@ bool BarleyBreak::gameEnded()
 // т.к. ровно половину возможных состояний невозможно собрать
 void BarleyBreak::shuffle()
 {
-    //return;
     int countStep = this->gameBoardSize*60; // 60 рандомное число
                                              // количество кликов
     int direction = 0;

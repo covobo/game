@@ -21,6 +21,11 @@ TilesGame* GlobalSettings::getGameLogicObject(int gameBoardSize)
     return dynamic_cast<TilesGame*>(new BarleyBreak(gameBoardSize));
 }
 
+void GlobalSettings::setTimePlay(QString stringTime)
+{
+    timeplay = stringTime;
+}
+
 void GlobalSettings::setGameBoardSize(int newValue)
 {
     if(GAME_BOARD_SIZE != newValue){
@@ -32,4 +37,10 @@ void GlobalSettings::setGameBoardSize(int newValue)
 int GlobalSettings::getGameBoardSize()
 {
     return GAME_BOARD_SIZE;
+}
+
+
+QString GlobalSettings::getLastTimePlay()
+{
+    return timeplay;
 }

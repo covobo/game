@@ -22,7 +22,7 @@ GamePlayWidget::GamePlayWidget(QWidget *parent) :
     connect(ui->restartGameBtn, SIGNAL(clicked()), this, SLOT(restartTimer()));
     connect(ui->restartGameBtn, SIGNAL(clicked()), ui->gameTiles, SLOT(createLogicAndBoard()));
     connect(ui->restartGameBtn, SIGNAL(clicked()), this, SLOT(showTimer()));
-
+    connect(ui->gameTiles, SIGNAL(iAmWinner()), this, SLOT(saveTime()));
 }
 
 GamePlayWidget::~GamePlayWidget()
@@ -69,6 +69,12 @@ void GamePlayWidget::hideTimer()
     timer->stop();
     ui->gameTiles->hide();
     ui->pauseGameBtn->setText(QString("Продолжить"));
+}
+
+void GamePlayWidget::saveTime()
+{
+    GlobalSettings* settings = GlobalSettings::Instance();
+    settings->setTimePlay(ui->timerGame->text());
 }
 
 

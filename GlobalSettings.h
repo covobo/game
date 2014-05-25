@@ -3,6 +3,7 @@
 #define DEFAULT_GAME_BOARD_SIZE 4
 #include <QObject>
 #include "TilesGame.h"
+#include <QString>
 
 class GlobalSettings : public QObject
 {
@@ -12,13 +13,14 @@ public:
     int getGameBoardSize();
     static GlobalSettings* Instance();
     TilesGame* getGameLogicObject(int gameBoardSize);
-
+    void setTimePlay(QString stringTime);
+    QString getLastTimePlay();
 private:
     int GAME_BOARD_SIZE;
     GlobalSettings();
     GlobalSettings& operator=(GlobalSettings const&);
     static GlobalSettings* GlobalSettingsInstance;
-
+    QString timeplay;
 signals:
     void gameBoardSizeValueChanged();
 };
