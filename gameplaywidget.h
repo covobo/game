@@ -23,6 +23,8 @@ public slots:
     void restartTimer();
     void triggerPauseAndPlayGame();
     void restartGame();
+    void showTimer();
+    void hideTimer();
 private:
     Ui::GamePlayWidget *ui;
      void setTime(int);
